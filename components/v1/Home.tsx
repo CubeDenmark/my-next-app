@@ -1,8 +1,8 @@
 import Image from "next/image"
-import profile from "../public/images/profile.jpg"
+import profile from "../../public/images/profile.jpg"
 export default function Home() {
     return (
-        <div>
+        <section className="w-auto h-auto" id="home">
             <div className="flex flex-wrap justify-center items-center mt-40">
                 <div>
                     <Image 
@@ -37,6 +37,6 @@ export default function Home() {
                     I need AI.
                 </p>
             </div>
-        </div>
+        </section>
     )
 }
