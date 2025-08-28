@@ -45,13 +45,16 @@ export default function Projects() {
   ];
 
   return (
-    <section className="relative py-14 bg-white">
+    <section className="relative py-14 bg-white" style={{
+        background:
+          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+      }}>
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl sm:text-center md:mx-auto">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h3 className="text-gray-200 text-3xl font-semibold sm:text-4xl">
             Hear from our customers
           </h3>
-          <p className="mt-3 text-gray-600">
+          <p className="mt-3 text-gray-300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est
             hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna
             lorem, euismod volutpat arcu volutpat et.
@@ -73,7 +76,10 @@ export default function Projects() {
                         3 min read
                         </div> */}
                     </div>
-                    <div className="p-8">
+                    <div className="p-8" style={{
+        background:
+          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+      }}>
                         <div className="">
                             <div className="text-lg font-medium text-gray-800 mb-2">Title</div>
                             <p className="text-gray-500 text-sm">

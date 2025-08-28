@@ -125,14 +125,17 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-14 bg-white">
+    <section className="py-14 bg-white" style={{
+        background:
+          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+      }}>
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="relative max-w-2xl mx-auto sm:text-center">
           <div className="relative z-10">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <h3 className="text-gray-200 text-3xl font-semibold sm:text-4xl">
               Let’s help power your SaaS
             </h3>
-            <p className="mt-3">
+            <p className="mt-3 text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               congue, nisl eget molestie varius, enim ex faucibus purus.
             </p>
@@ -150,13 +153,17 @@ export default function Skills() {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="bg-white space-y-3 p-4 border rounded-lg"
+                className="bg-white space-y-3 p-4 border rounded-lg border-b-gray-950"
+                style={{
+                        background:
+                          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+                      }}
               >
                 <div className="text-indigo-600 pb-3">{item.icon}</div>
-                <h4 className="text-lg text-gray-800 font-semibold">
+                <h4 className="text-lg text-gray-200 font-semibold">
                   {item.title}
                 </h4>
-                <p>{item.desc}</p>
+                <p className="text-gray-300">{item.desc}</p>
                 <Progress />
               </li>
             ))}

@@ -2,13 +2,19 @@ import profile from "../../public/images/profile.jpg";
 import Image from "next/image";
 export default function Home() {
   return (
-        <section className="py-28 bg-white w-screen h-screen" >
-      <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
+        <section className="py-0 lg:py-28 bg-white h-screen" style={{
+        background:
+          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+      }}>
+      <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8 rounded-md p-10" style={{
+        background:
+          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+      }}>
         <div className="max-w-xl space-y-3 md:mx-auto">
-          <p className="text-3xl text-gray-600 font-semibold sm:text-4xl ">
+          <p className="text-3xl text-gray-200 font-semibold sm:text-4xl ">
             Build the future with us
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-300">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
             cupidatat non proident.
@@ -28,9 +34,9 @@ export default function Home() {
                     />
                     </div>
 
-                    <p className="text-2xl font-bold text-gray-600">Hi, I'm Denmark S. Cube</p>
+                    <p className="text-2xl font-bold text-gray-200">Hi, I'm Denmark S. Cube</p>
 
-                    <div className="text-gray-500">Aspiring Full-Stack Web Developer</div>
+                    <div className="text-gray-300">Aspiring Full-Stack Web Developer</div>
             </div>
             
         </div>
