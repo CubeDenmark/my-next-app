@@ -2,7 +2,7 @@ import profile from "../../public/images/profile.jpg";
 import Image from "next/image";
 export default function Home() {
   return (
-        <section className="py-0 lg:py-28 bg-white h-screen" style={{
+        <section id="home" className="py-0 lg:py-28 bg-white h-screen" style={{
         background:
           "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
       }}>

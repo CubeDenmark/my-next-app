@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
 
-    <section className="w-auto h-auto" id="home" style={{
+    <section className="w-auto h-auto" id="about" style={{
         background:
           "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
       }}>
