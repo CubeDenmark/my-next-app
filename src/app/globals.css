@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-body {
+#main_div_v1 {
+  background-color: #10172a;
+}
+
+#main_div_v2 {
   background-color: #10172a;
 }
 

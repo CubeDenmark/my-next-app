@@ -85,7 +85,7 @@ export default function Contact() {
   ];
 
   return (
-    <footer id="contact" className="pt-10 bg-white">
+    <footer id="contact" className="pt-30 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="justify-between items-center gap-12 md:flex">
           <div className="flex-1 max-w-lg">

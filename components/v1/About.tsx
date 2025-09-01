@@ -2,7 +2,7 @@ import Image from "next/image"
 import Profile from "../../public/images/profile.jpg"
 export default function About() {
     return (
-        <section className="w-auto h-auto" id="about">  
+        <section className="w-screen h-screen" id="about">  
                 <div className="flex flex-wrap justify-center mt-30">
                     <h1 className="text-3xl font-mono text-teal-400">About</h1>
                 </div>

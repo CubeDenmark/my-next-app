@@ -8,7 +8,7 @@ import Footer from "../../components/v1/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main_div_v1">
       <Header />
       <Main />
       <About />

@@ -2,8 +2,11 @@ import Image from "next/image"
 import profile from "../../public/images/profile.jpg"
 export default function Home() {
     return (
-        <section className="w-auto h-auto" id="home">
-            <div className="flex flex-wrap justify-center items-center mt-40">
+        <section className="w-auto h-screen mb-100" id="home">
+             <div className="h-[15%]">
+
+            </div>
+            <div className="flex flex-wrap justify-center items-center ">
                 <div>
                     <Image 
                         width={250} 

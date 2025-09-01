@@ -7,7 +7,7 @@ import Contact from "../../../components/v2/Contact";
 export default function v2() {
 
     return (
-        <div>
+        <div id="main_div_v2">
             <Navbar />
             <Home />
             <About />
