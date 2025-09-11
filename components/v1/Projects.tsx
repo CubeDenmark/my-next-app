@@ -13,7 +13,7 @@ export default function Projects() {
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Agrikultur'App 
+                        Agrikultur&apos;App 
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
@@ -32,7 +32,7 @@ export default function Projects() {
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
-                        App for monitoring Student's performance like Grades, 
+                        App for monitoring Student&apos;s performance like Grades, 
                         Quizes, Exams, behavior, and General average of Student.
                     </p>
                 </div>
@@ -69,7 +69,7 @@ export default function Projects() {
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Agrikultur'App 
+                        Agrikultur&apos;App 
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
@@ -84,7 +84,7 @@ export default function Projects() {
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Agrikultur'App 
+                        Agrikultur&apos;App 
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">

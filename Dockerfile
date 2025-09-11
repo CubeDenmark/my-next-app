@@ -1,16 +1,18 @@
-FROM node:10-alpine AS testbuilder
+FROM node:18-alpine AS testbuilder
 
 WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install --lagacy-peer-deps
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
+RUN npm run lint -- --fix
+
 RUN npm run build
 
-FROM node:10-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 

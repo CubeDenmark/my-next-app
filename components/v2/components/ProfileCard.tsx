@@ -16,7 +16,7 @@ export default function ProfileCard() {
                     />
                     </div>
 
-                    <p className="text-2xl font-bold text-white">Hi, I'm Denmark S. Cube</p>
+                <p className="text-2xl font-bold text-white">Hi, I&apos;m Denmark S. Cube</p>
 
                     <div className="text-gray-400">Aspiring Full-Stack Web Developer</div>
             </div>

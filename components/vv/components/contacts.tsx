@@ -33,7 +33,7 @@ export default function Contacts() {
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">Get In Touch</h2>
           <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate? Let's discuss your next project or just say hello!
+            Ready to collaborate? Let&apos;s discuss your next project or just say hello!
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Contacts() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
-                <h3 className="text-2xl font-serif font-bold text-accent mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-serif font-bold text-accent mb-6">Let&apos;s Connect</h3>
 
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">

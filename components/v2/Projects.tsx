@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function Projects() {
   const testimonials = [
     {
@@ -65,9 +66,12 @@ export default function Projects() {
             {testimonials.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
                     <div className="relative">
-                        <img
+                        <Image
                         className="w-full h-48 object-cover"
                         src="https://via.placeholder.com/600x360"
+                        alt="Project preview"
+                        width={600}
+                        height={360}
                         />
                         {/* <div className="absolute top-0 right-0 bg-indigo-500 text-white font-bold px-2 py-1 m-2 rounded-md">
                         New
@@ -89,10 +93,10 @@ export default function Projects() {
                             </p>
                         </div>
                         <a href="#" className="float-right">
-                            <img src="https://img.icons8.com/flat_round/24/000000/share--v1.png" />
+                            <Image src="https://img.icons8.com/flat_round/24/000000/share--v1.png" alt="Share icon" width={24} height={24} />
                             </a>
                             <a href="#" className="float-right mr-3">
-                            <img src="https://img.icons8.com/flat_round/24/000000/hearts.png" />
+                            <Image src="https://img.icons8.com/flat_round/24/000000/hearts.png" alt="Heart icon" width={24} height={24} />
                         </a>
                     </div>          
                 </div>

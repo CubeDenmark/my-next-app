@@ -39,7 +39,7 @@ export default function Projects() {
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">My Projects</h2>
           <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of applications I've built using modern web technologies and best practices
+            A showcase of applications I&apos;ve built using modern web technologies and best practices
           </p>
         </div>
 

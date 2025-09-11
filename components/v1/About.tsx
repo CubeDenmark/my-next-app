@@ -15,13 +15,13 @@ export default function About() {
                     />
                 </div>
                 <div>
-                     <p className="w-150 text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">
-                        AI changes many things including how Web Developer works on evey projects.
-                        We use AI on our daily task even with just one single code syntax that we
-                        forgot. Most of my projects have AI intervention including this portfolio
-                        but it doesn't mean I am fully relient on AI. I'm an Aspiring Full-Stack Developer 
-                        and DevOps Engineer, codes, syntaxes, rules, etc needed memmorization, that is why 
-                        I need AI.
+                                <p className="w-150 text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">
+                                    AI changes many things including how Web Developer works on evey projects.
+                                    We use AI on our daily task even with just one single code syntax that we
+                                    forgot. Most of my projects have AI intervention including this portfolio
+                                    but it doesn&apos;t mean I am fully relient on AI. I&apos;m an Aspiring Full-Stack Developer 
+                                    and DevOps Engineer, codes, syntaxes, rules, etc needed memmorization, that is why 
+                                    I need AI.
                     </p>
                 </div>
             </div>

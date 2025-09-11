@@ -61,7 +61,7 @@ export default function Skills() {
           <div className="bg-card p-8 rounded-xl shadow-lg border border-border max-w-4xl mx-auto">
             <h3 className="text-2xl font-serif font-bold text-accent mb-4">Always Learning</h3>
             <p className="text-card-foreground leading-relaxed">
-              Technology evolves rapidly, and I'm committed to continuous learning. Currently exploring advanced React
+              Technology evolves rapidly, and I&apos;m committed to continuous learning. Currently exploring advanced React
               patterns, cloud deployment strategies, and modern DevOps practices to stay current with industry
               standards.
             </p>

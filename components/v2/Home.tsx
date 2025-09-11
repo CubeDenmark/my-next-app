@@ -34,7 +34,7 @@ export default function Home() {
                     />
                     </div>
 
-                    <p className="text-2xl font-bold text-gray-200">Hi, I'm Denmark S. Cube</p>
+                    <p className="text-2xl font-bold text-gray-200">Hi, I&apos;m Denmark S. Cube</p>
 
                     <div className="text-gray-300">Aspiring Full-Stack Web Developer</div>
             </div>

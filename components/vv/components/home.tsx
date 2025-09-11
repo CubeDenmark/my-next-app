@@ -18,7 +18,7 @@ export default function Home() {
 
           <div className="text-center lg:text-left max-w-2xl">
             <div className="mb-6">
-              <p className="text-lg text-muted-foreground mb-2 font-sans">Hello, I'm</p>
+              <p className="text-lg text-muted-foreground mb-2 font-sans">Hello, I&apos;m</p>
               <h1 className="text-4xl lg:text-6xl font-serif font-bold text-balance mb-4">
                 <span className="text-foreground">Denmark S. </span>
                 <span className="text-accent">Cube</span>
