@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Git
+.git
+.gitignore
+
+# Build cache and local files
+.DS_Store
+dist
+.next/cache
+coverage
+
+# Environment and secrets
+.env
+.env.local
+
+# OS or editor files
+.vscode
+.idea
+
