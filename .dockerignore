@@ -1,23 +1,19 @@
-# Dependencies
+# Existing
 node_modules
 npm-debug.log
 yarn-error.log
-
-# Git
 .git
 .gitignore
-
-# Build cache and local files
 .DS_Store
 dist
 .next/cache
 coverage
-
-# Environment and secrets
 .env
 .env.local
-
-# OS or editor files
 .vscode
 .idea
 
+# ➕ Add these
+.next        # You’re rebuilding in Docker; no need to copy local builds
+*.md         # Docs aren’t needed in the container
+*.log

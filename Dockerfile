@@ -1,26 +1,26 @@
-FROM node:18-alpine AS testbuilder
-
+# ---- Build Stage ----
+FROM node:18-alpine AS build
 WORKDIR /app
 
+# Copy only what’s needed for deps first (better caching)
 COPY package.json package-lock.json ./
+RUN npm ci --legacy-peer-deps
 
-RUN npm install --legacy-peer-deps
-
+# Copy source
 COPY . .
 
-RUN npm run lint -- --fix
-
+# ❌ Skip lint in the image (run lint locally or in CI)
 RUN npm run build
 
-FROM node:18-alpine
-
+# ---- Production Stage ----
+FROM node:18-alpine AS production
 WORKDIR /app
 
-COPY --from=testbuilder /app/.next ./.next
-COPY --from=testbuilder /app/node_modules ./node_modules
-COPY --from=testbuilder /app/public ./public
-COPY --from=testbuilder /app/package.json ./package.json
+# Copy minimal artifacts
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/public ./public
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/node_modules ./node_modules
 
 EXPOSE 3000
-
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
