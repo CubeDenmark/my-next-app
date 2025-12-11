@@ -10,6 +10,8 @@ export default function Home() {
             <Image
               width={300}
               height={300}
+              // src="/professional-developer-headshot.png"
+              // src="/images/profile.jpg"
               src="/professional-developer-headshot.png"
               alt="Denmark S. Cube - Professional Developer"
               className="relative rounded-full border-4 border-accent shadow-2xl pulse-glow"
