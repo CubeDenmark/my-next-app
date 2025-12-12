@@ -21,6 +21,6 @@ COPY --from=testbuilder /app/node_modules ./node_modules
 COPY --from=testbuilder /app/public ./public
 COPY --from=testbuilder /app/package.json ./package.json
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD [ "npm", "start" ]
