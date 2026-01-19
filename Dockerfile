@@ -22,5 +22,11 @@ COPY --from=build /app/public ./public
 COPY --from=build /app/package.json ./package.json
 COPY --from=build /app/node_modules ./node_modules
 
+<<<<<<< HEAD
 EXPOSE 3000
 CMD ["npm", "start"]
+=======
+EXPOSE 3001
+
+CMD [ "npm", "start" ]
+>>>>>>> 2cfc2016dcaf1028b2c3f065c47f64f8d2ed426e

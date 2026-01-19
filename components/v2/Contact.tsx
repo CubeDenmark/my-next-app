@@ -136,7 +136,7 @@ export default function Contact() {
             © 2025 All rights reserved.
           </p>
           <div className="flex items-center gap-x-6 text-gray-400 mt-6">
-            <a href="javascript:void()">
+            <a href="https://www.facebook.com/makxies24">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -155,7 +155,7 @@ export default function Contact() {
                 </defs>
               </svg>
             </a>
-            <a href="javascript:void()">
+            {/* <a href="javascript:void()">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -173,8 +173,8 @@ export default function Contact() {
                   </clipPath>
                 </defs>
               </svg>
-            </a>
-            <a href="javascript:void()">
+            </a> */}
+            <a href="https://github.com/CubeDenmark">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -195,7 +195,7 @@ export default function Contact() {
                 </defs>
               </svg>
             </a>
-            <a href="javascript:void()">
+            <a href="https://www.instagram.com/makxies/">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="currentColor"
