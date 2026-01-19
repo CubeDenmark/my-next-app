@@ -24,6 +24,12 @@ export default function Skills() {
                     <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">Bootstrap</h3></li>
                     <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">JavaScript</h3></li>
                 </ul>
+                <ul className="flex flex-col justify-around">
+                    <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">Nextjs</h3></li>
+                    <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">Expressjs</h3></li>
+                    <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">Reactjs</h3></li>
+                    <li><h3 className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px] text-justify">Nestjs</h3></li>
+                </ul>
             </div>
         </section>
     )
