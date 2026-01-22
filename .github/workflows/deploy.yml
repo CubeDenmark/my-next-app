@@ -1,4 +1,4 @@
-name: Build and Deploy Next.js via Cloudflare SSH
+name: Build and Deploy Portfolio with three(3) version via Cloudflare SSH
 
 on:
   push:
