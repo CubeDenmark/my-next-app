@@ -22,6 +22,6 @@ COPY --from=build /app/public ./public
 COPY --from=build /app/package.json ./package.json
 COPY --from=build /app/node_modules ./node_modulesc:\Users\cubes\Desktop\Programming_Practice\gitops\next_app_test\docker
 
-EXPOSE 3001
+EXPOSE 3002
 
 CMD [ "npm", "start" ]
