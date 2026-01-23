@@ -23,6 +23,6 @@ COPY --from=portfolio-builder ./app/node_modules /app/node_modules
 COPY --from=portfolio-builder ./app/public /app/public
 COPY --from=portfolio-builder ./app/package.json /app/package.json
 
-EXPOSE 3002
+EXPOSE 3000
 
 CMD [ "npm", "start" ]
