@@ -8,4 +8,4 @@ services:
     container_name: x3portfolio
     restart: always
     ports:
-      - "3000:3000"
+      - "3002:3002"
