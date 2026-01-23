@@ -17,3 +17,5 @@ coverage
 .next        # You’re rebuilding in Docker; no need to copy local builds
 *.md         # Docs aren’t needed in the container
 *.log
+.github
+.github/*
