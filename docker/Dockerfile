@@ -4,7 +4,10 @@ WORKDIR /app
 
 # Copy only what’s needed for deps first (better caching)
 # Copy source
+
+COPY package*.json ./
 COPY . .
+
 RUN npm ci --legacy-peer-deps
 
 

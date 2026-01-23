@@ -3,9 +3,22 @@ services:
   web:
     image: makxies24/x3portfolio:latest
     build:
-      context: ./docker/
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: docker/Dockerfile
     container_name: x3portfolio
     restart: always
     ports:
-      - "3000:3000"
+      - "3001:3000"
+
+
+
+# services:
+#   web:
+#     image: makxies24/x3portfolio:latest
+#     build:
+#       context: ./docker/
+#       dockerfile: Dockerfile
+#     container_name: x3portfolio
+#     restart: always
+#     ports:
+#       - "3000:3000"
