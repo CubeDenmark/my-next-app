@@ -20,7 +20,7 @@ export default function Home() {
                     <p className="text-white font-mono xl:text-3xl lg:text-2xl text-[17px]">
                         Hi, I&apos;m 
                         <strong className="font-mono xl:text-3xl bg-gradient-to-r from-red-500 to-teal-400 bg-clip-text text-transparent"> Denmark S. Cube </strong>
-                        <br />Aspiring Full-Stack Web Developer
+                        <br />Aspiring Full-Stack Web Developer and DevOps Engineer 
                     </p>
                 </div>
             </div>
