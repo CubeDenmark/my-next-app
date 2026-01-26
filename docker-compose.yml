@@ -1,7 +1,7 @@
 
 services:
   web:
-    image: makxies24/x3portfolio:latest
+    image: makxies24/x3portfolio:v${TAG:-latest}
     build:
       context: .
       dockerfile: docker/Dockerfile
