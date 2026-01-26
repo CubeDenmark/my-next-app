@@ -54,7 +54,7 @@ jobs:
             -o ProxyCommand="cloudflared access ssh --hostname ssh.edutrack.space" \
             makxiesdell@ssh.edutrack.space \
             "
-            cd /opt/apps/nextjs || exit 1
+            cd /opt/apps/x3portfolio || exit 1
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
             docker compose up -d
             docker image prune -f
