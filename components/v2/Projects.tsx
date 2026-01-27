@@ -1,49 +1,50 @@
 import Image from 'next/image';
+import { testimonials } from '@/src/assets/images';
 export default function Projects() {
-  const testimonials = [
-    {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Martin escobar",
-      title: "Founder of meta",
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Simon andrew",
-      title: "Software engineer",
-      quote:
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Micheal worin",
-      title: "Product designer",
-      quote:
-        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
-    },
-     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Martin escobar",
-      title: "Founder of meta",
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Simon andrew",
-      title: "Software engineer",
-      quote:
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Micheal worin",
-      title: "Product designer",
-      quote:
-        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Martin escobar",
+  //     title: "Founder of meta",
+  //     quote:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
+  //   },
+  //   {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Simon andrew",
+  //     title: "Software engineer",
+  //     quote:
+  //       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+  //   },
+  //   {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Micheal worin",
+  //     title: "Product designer",
+  //     quote:
+  //       "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
+  //   },
+  //    {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Martin escobar",
+  //     title: "Founder of meta",
+  //     quote:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
+  //   },
+  //   {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Simon andrew",
+  //     title: "Software engineer",
+  //     quote:
+  //       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+  //   },
+  //   {
+  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
+  //     name: "Micheal worin",
+  //     title: "Product designer",
+  //     quote:
+  //       "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
+  //   },
+  // ];
 
   return (
     <section id="projects" className="relative pt-30 py-14 bg-white" style={{
@@ -68,7 +69,7 @@ export default function Projects() {
                     <div className="relative">
                         <Image
                         className="w-full h-48 object-cover"
-                        src="https://via.placeholder.com/600x360"
+                        src={item.imageSrc}
                         alt="Project preview"
                         width={600}
                         height={360}
@@ -81,15 +82,13 @@ export default function Projects() {
                         </div> */}
                     </div>
                     <div className="p-8" style={{
-        background:
-          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
-      }}>
+                                                  background:
+                                                    "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+                                                }}>
                         <div className="">
-                            <div className="text-lg font-medium text-gray-800 mb-2">Title</div>
+                            <div className="text-lg font-medium text-gray-800 mb-2">{item.projectName}</div>
                             <p className="text-gray-500 text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                            auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non
-                            aliquam quam massa id lacus.
+                               {item.description}
                             </p>
                         </div>
                         <a href="#" className="float-right">
