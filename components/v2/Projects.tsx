@@ -1,50 +1,6 @@
 import Image from 'next/image';
 import { testimonials } from '@/src/assets/images';
 export default function Projects() {
-  // const testimonials = [
-  //   {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Martin escobar",
-  //     title: "Founder of meta",
-  //     quote:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
-  //   },
-  //   {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Simon andrew",
-  //     title: "Software engineer",
-  //     quote:
-  //       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-  //   },
-  //   {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Micheal worin",
-  //     title: "Product designer",
-  //     quote:
-  //       "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
-  //   },
-  //    {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Martin escobar",
-  //     title: "Founder of meta",
-  //     quote:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.",
-  //   },
-  //   {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Simon andrew",
-  //     title: "Software engineer",
-  //     quote:
-  //       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-  //   },
-  //   {
-  //     image_src: "/public/images/projects-img/agrikulturapp/landing-page.png",
-  //     name: "Micheal worin",
-  //     title: "Product designer",
-  //     quote:
-  //       "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
-  //   },
-  // ];
 
   return (
     <section id="projects" className="relative pt-30 py-14 bg-white" style={{
