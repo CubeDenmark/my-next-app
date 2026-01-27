@@ -48,10 +48,12 @@ export default function Projects() {
                             </p>
                         </div>
                         <a href="#" className="float-right">
-                            <Image src="https://img.icons8.com/flat_round/24/000000/share--v1.png" alt="Share icon" width={24} height={24} />
+                          Demo
+                            {/* <Image src="https://img.icons8.com/flat_round/24/000000/share--v1.png" alt="Share icon" width={24} height={24} /> */}
                             </a>
                             <a href="#" className="float-right mr-3">
-                            <Image src="https://img.icons8.com/flat_round/24/000000/hearts.png" alt="Heart icon" width={24} height={24} />
+                          Repo
+                            {/* <Image src="https://img.icons8.com/flat_round/24/000000/hearts.png" alt="Heart icon" width={24} height={24} /> */}
                         </a>
                     </div>          
                 </div>
