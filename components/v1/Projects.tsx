@@ -67,7 +67,7 @@ export default function Projects() {
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
                         Auction your secondhand vehicle to get better prices. 
-                        Transac to potential buyer realtime using realtime bidding 
+                        Transact to potential buyer realtime using realtime bidding 
                         and chat system.
                     </p>
                 </div>
