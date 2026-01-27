@@ -1,5 +1,11 @@
 import Image from "next/image"
-import Profile from "../../public/images/profile.jpg"
+import Agrikulturapp from "../../public/images/projects-img/agrikulturapp/landing-page.png"
+import Agriappv2 from "../../public/images/projects-img/agriappv2/landing-page.png"
+import Edutrack from "../../public/images/projects-img/edutrack/landing-page.png"
+import Pawtrack from "../../public/images/projects-img/pawtrack/landing-page.png"
+import Auctionear from "../../public/images/projects-img/auctionear/landing-page.png"
+import AMS from "../../public/images/projects-img/ams/landing-page.png"
+// import Profile from "../../public/images/profile.jpg"
 export default function Projects() {
     return (
         <section className="w-auto h-auto" id="projects">  
@@ -9,7 +15,7 @@ export default function Projects() {
             <div className="flex flex-wrap justify-evenly p-10">
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={Agrikulturapp}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
@@ -24,7 +30,7 @@ export default function Projects() {
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={Edutrack}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
@@ -38,7 +44,7 @@ export default function Projects() {
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={Pawtrack}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
@@ -52,7 +58,7 @@ export default function Projects() {
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={Auctionear}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
@@ -65,11 +71,11 @@ export default function Projects() {
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={AMS}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Agrikultur&apos;App 
+                        Attendance ManagementS System 
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
@@ -80,13 +86,13 @@ export default function Projects() {
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
                     <Image className="rounded-t-2xl w-full h-50"
-                            src={Profile}
+                            src={Agriappv2}
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Agrikultur&apos;App 
+                        AgriApp version 2 
                     </h3>
-                    <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
+                    <p className="text-white pl-4">Tech Stack: <strong>Nextjs, Supabase, TailwindCSS</strong></p>
                     <p className="text-white pl-2 indent-10">
                         An Auction Platform for Farmers selling their
                         Produce directly to Consumers, Elliminating 
