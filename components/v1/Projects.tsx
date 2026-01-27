@@ -75,13 +75,12 @@ export default function Projects() {
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        Attendance ManagementS System 
+                        QR Code Attendance ManagementS System 
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>LAMP</strong></p>
                     <p className="text-white pl-2 indent-10">
-                        An Auction Platform for Farmers selling their
-                        Produce directly to Consumers, Elliminating 
-                        middlemen, thererfore lowering prices. 
+                        Utilizing QR code technology for taking students attendance. Dashboard and other essentials 
+                        for managing students attendance like exporting PDF or Excel file.
                     </p>
                 </div>
                 <div className="rounded-2xl mt-2 w-120 border-2 border-teal-400">
@@ -90,13 +89,14 @@ export default function Projects() {
                             alt="Test Image"
                     />
                     <h3 className="text-teal-400 font-bold font-mono text-[18px] pl-2 pt-1">
-                        AgriApp version 2 
+                        AgriApp
                     </h3>
                     <p className="text-white pl-4">Tech Stack: <strong>Nextjs, Supabase, TailwindCSS</strong></p>
                     <p className="text-white pl-2 indent-10">
-                        An Auction Platform for Farmers selling their
-                        Produce directly to Consumers, Elliminating 
-                        middlemen, thererfore lowering prices. 
+                        Agrikultur&apos;App version 2 - Modern design, architecture, technology 
+                        providing faster response time, user friendly design, and user-experience. 
+                        Farmers can sell their produce more easily, consumers will be able to 
+                        see realtime bidding.
                     </p>
                 </div>
             </div>
