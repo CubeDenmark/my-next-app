@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { testimonials } from '@/src/assets/images';
+import { Button } from '@/vv/components/ui/button';
 export default function Projects() {
 
   return (
@@ -48,11 +49,12 @@ export default function Projects() {
                             </p>
                         </div>
                         <a href="#" className="float-right">
-                          Demo
+                          <Button className='border-1 my-2 text-blue-400'>Demo</Button>
+                          
                             {/* <Image src="https://img.icons8.com/flat_round/24/000000/share--v1.png" alt="Share icon" width={24} height={24} /> */}
                             </a>
                             <a href="#" className="float-right mr-3">
-                          Repo
+                          <Button className='border-1 my-2 text-blue-400'>Repo</Button>
                             {/* <Image src="https://img.icons8.com/flat_round/24/000000/hearts.png" alt="Heart icon" width={24} height={24} /> */}
                         </a>
                     </div>          
