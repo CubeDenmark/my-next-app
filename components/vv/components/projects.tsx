@@ -1,35 +1,5 @@
 import Image from "next/image"
-
-const projects = [
-  {
-    title: "AgriKultur App",
-    tech: "LAMP Stack",
-    description:
-      "An auction platform for farmers selling their produce directly to consumers, eliminating middlemen and lowering prices for everyone.",
-    image: "/agricultural-marketplace-app-interface.png",
-  },
-  {
-    title: "EduTrack",
-    tech: "LAMP Stack",
-    description:
-      "Comprehensive app for monitoring student performance including grades, quizzes, exams, behavior, and overall academic progress.",
-    image: "/educational-tracking-dashboard.png",
-  },
-  {
-    title: "PawTrack",
-    tech: "LAMP Stack",
-    description:
-      "E-commerce platform for pet necessities with integrated scheduling for pet services like grooming and deworming.",
-    image: "/pet-care-services-app.png",
-  },
-  {
-    title: "Auctioneer",
-    tech: "LAMP Stack",
-    description:
-      "Online auction platform specifically designed for selling second-hand vehicles with secure bidding system.",
-    image: "/vehicle-auction-platform.png",
-  },
-]
+import { projects } from '@/src/assets/images';
 
 export default function Projects() {
   return (
@@ -52,8 +22,8 @@ export default function Projects() {
               <div className="relative overflow-hidden">
                 <Image
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  src={project.image || "/placeholder.svg"}
-                  alt={`${project.title} project screenshot`}
+                  src={project.imageSrc || "/placeholder.svg"}
+                  alt={`${project.projectName} project screenshot`}
                   width={300}
                   height={200}
                 />
@@ -63,7 +33,7 @@ export default function Projects() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-serif font-bold text-accent group-hover:text-secondary transition-colors duration-300">
-                    {project.title}
+                    {project.projectName}
                   </h3>
                   <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">
                     {project.tech}

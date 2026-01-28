@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { testimonials } from '@/src/assets/images';
+import { projects } from '@/src/assets/images';
 import { Button } from '@/vv/components/ui/button';
 export default function Projects() {
 
@@ -21,7 +21,7 @@ export default function Projects() {
         </div>
         <div className="mt-12">
           <ul className="grid items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((item, idx) => (
+            {projects.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
                     <div className="relative">
                         <Image
