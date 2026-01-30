@@ -11,12 +11,16 @@ export default function Projects() {
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl sm:text-center md:mx-auto">
           <h3 className="text-gray-200 text-3xl font-semibold sm:text-4xl">
-            Hear from our customers
+            Proven digital solutions
+            {/* Hear from our customers */}
           </h3>
           <p className="mt-3 text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est
-            hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna
-            lorem, euismod volutpat arcu volutpat et.
+            A curated selection of web applications and systems developed to address
+            real-world business challenges. Each project reflects a focus on functionality, 
+            system structure, and performance, with solutions tailored to specific operational needs.
+            <br /><br />
+            The projects demonstrate experience in workflow automation, data-driven applications,
+            and end-to-end system development, from planning and implementation to deployment.
           </p>
         </div>
         <div className="mt-12">

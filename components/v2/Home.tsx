@@ -12,12 +12,17 @@ export default function Home() {
       }}>
         <div className="max-w-xl space-y-3 md:mx-auto">
           <p className="text-3xl text-gray-200 font-semibold sm:text-4xl ">
-            Build the future with us
+              Let&apos;s Build The Future
+            {/* Build the future with us */}
           </p>
           <p className="text-gray-300">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            Web solutions that transform manual processes into efficient, digital systems.
+            {/* Web solutions that transform manual processes into efficient, digital systems. */}
+            {/* Systems that make your business grow. Digitalize 
+            workflow, repeated task, etc. */}
+            {/* Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-            cupidatat non proident.
+            cupidatat non proident. */}
           </p>
         </div>
         <div className="mt-4">
@@ -36,7 +41,7 @@ export default function Home() {
 
                     <p className="text-2xl font-bold text-gray-200">Hi, I&apos;m Denmark S. Cube</p>
 
-                    <div className="text-gray-300">Aspiring Full-Stack Web Developer</div>
+                    <div className="text-gray-300 text-center">Aspiring Full-Stack Web Developer and DevOps Engineer</div>
             </div>
             
         </div>

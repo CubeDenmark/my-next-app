@@ -12,12 +12,20 @@ export default function About() {
                     <div className="m-10">
                         <div className="max-w-xl space-y-3 md:mx-auto">
                             <p className="text-gray-200 text-3xl font-semibold sm:text-4xl ">
-                                Build the future with us
+                                Processes into powerful digital systems.
                             </p>
                             <p className="text-gray-300">
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                Web development centered on the design and implementation of practical,
+                                business-driven digital systems. Experience includes building web applications
+                                that streamline internal workflows, manage and process data effectively,
+                                and improve overall operational efficiency.
+                                <br /><br />
+                                Solutions are developed using modern web technologies, following
+                                structured architectures and best practices to ensure scalability,
+                                reliability, and ease of maintenance over time.
+                                {/* Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-                                cupidatat non proident.
+                                cupidatat non proident. */}
                             </p>
                         </div>
                     </div>
