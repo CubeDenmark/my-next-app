@@ -25,7 +25,7 @@ export default function Skills() {
       ),
       title: "Laravel",
       desc: "A Web application framework with expressive, elegant syntax. Laravel strives to provide an amazing developer experience while providing powerful features such as thorough dependency injection, an expressive database abstraction layer, queues and scheduled jobs, unit and integration testing, and more.",
-      progress: 25,
+      progress: 75,
     },
     {
       icon: (
@@ -44,7 +44,7 @@ export default function Skills() {
       ),
       title: "Next.js",
       desc: "Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations. It also automatically configures lower-level tools like bundlers and compilers. You can instead focus on building your product and shipping quickly.",
-      progress: 50,
+      progress: 25,
     },
     {
       icon: (
@@ -84,7 +84,7 @@ export default function Skills() {
       ),
       title: "Express.js",
       desc: "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. Provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.",
-      progress: 100,
+      progress: 25,
     },
     {
       icon: (
@@ -111,7 +111,7 @@ export default function Skills() {
       ),
       title: "React.js",
       desc: "ReactJS is a component-based JavaScript library used to build dynamic and interactive user interfaces. It simplifies the creation of single-page applications (SPAs) with a focus on performance and maintainability.",
-      progress: 75,
+      progress: 25,
     },
     {
       icon: (
@@ -151,7 +151,7 @@ export default function Skills() {
       ),
       title: "Nest.js",
       desc: "Nest (NestJS) is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with and fully supports TypeScript (yet still enables developers to code in pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).",
-      progress: 100,
+      progress: 25,
     },
   ];
 
@@ -205,7 +205,7 @@ export default function Skills() {
                 <h4 className="text-lg text-gray-200 font-semibold">
                   {item.title}
                 </h4>
-                <p className="text-gray-300">{item.desc}</p>
+                <p className="text-gray-300 text-justify indent-6">{item.desc}</p>
                 <Progress progress={item.progress} />
               </li>
             ))}
