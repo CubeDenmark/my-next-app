@@ -23,9 +23,10 @@ export default function About() {
                                 Solutions are developed using modern web technologies, following
                                 structured architectures and best practices to ensure scalability,
                                 reliability, and ease of maintenance over time.
-                                {/* Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-                                cupidatat non proident. */}
+                                cupidatat non proident.
                             </p>
                         </div>
                     </div>
