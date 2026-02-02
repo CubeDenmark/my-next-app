@@ -1,7 +1,7 @@
 import Progress from "./components/Progress";
 
 export default function Skills() {
-  const features = [
+  const frameworks = [
      {
       icon: (
        <svg 
@@ -155,6 +155,60 @@ export default function Skills() {
     },
   ];
 
+    const languages = [
+     {
+      gname: "Languages",
+      skills: [
+        {
+          name: "PHP",
+          progress: 75,
+        },
+        {
+          name: "Javascript",
+          progress: 50,
+        },
+        {
+          name: "MySql",
+          progress: 25,
+        }
+      ]
+     },
+     {
+      gname: "DevOps Tools",
+      skills: [
+        {
+          name: "PHP",
+          progress: 75,
+        },
+        {
+          name: "Javascript",
+          progress: 50,
+        },
+        {
+          name: "MySql",
+          progress: 25,
+        }
+      ]
+     },
+     {
+      gname: "Other tools",
+      skills: [
+        {
+          name: "PHP",
+          progress: 75,
+        },
+        {
+          name: "Javascript",
+          progress: 50,
+        },
+        {
+          name: "MySql",
+          progress: 25,
+        }
+      ]
+     },
+  ];
+
   return (
     <section id="skills" className="pt-30 py-14 bg-white" style={{
         background:
@@ -192,7 +246,7 @@ export default function Skills() {
 
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, idx) => (
+            {frameworks.map((item, idx) => (
               <li
                 key={idx}
                 className="bg-white space-y-3 p-4 border rounded-lg border-b-gray-950"
@@ -212,6 +266,46 @@ export default function Skills() {
           </ul>
          
         </div>
+
+        <h5 className="text-gray-200 text-3xl font-semibold sm:text-4xl mt-14">
+          Programming and other Languages
+        </h5>
+
+        <div className="relative mt-12">
+          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {languages.map((item, idx) => (
+              <li
+                key={idx}
+                className="bg-white space-y-3 p-4 border rounded-lg border-b-gray-950"
+                style={{
+                        background:
+                          "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+                      }}
+              >
+                <h3 className="text-lg text-gray-200 font-semibold text-center">{item.gname}</h3>
+
+                {item.skills.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-white space-y-3 p-4 border rounded-lg border-b-gray-950"
+                    style={{
+                            background:
+                              "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
+                          }}
+                  >
+                    <h4 className="text-lg text-gray-200 font-semibold">
+                      {item.name}
+                    </h4>
+                    {/* <p className="text-gray-300 text-justify indent-6">{item.name}</p> */}
+                    <Progress progress={item.progress} />
+                  </li>
+                ))}
+              </li>
+            ))}
+          </ul>
+         
+        </div>
+
       </div>
     </section>
   );
