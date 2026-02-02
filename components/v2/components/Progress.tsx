@@ -1,5 +1,5 @@
 
-export default function Progress({progress}) {
+export default function Progress({progress, } : { progress : number}) {
 
 
 
