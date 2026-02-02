@@ -1,5 +1,5 @@
 
-export default function Progress({progress, } : { progress : number}) {
+export default function Progress({progress, } : { progress : number | undefined}) {
 
 
 
@@ -9,28 +9,28 @@ export default function Progress({progress, } : { progress : number}) {
     <div>
       <div className="w-full flex items-center gap-x-1">
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
@@ -49,28 +49,28 @@ export default function Progress({progress, } : { progress : number}) {
       <div>
       <div className="w-full flex items-center gap-x-1">
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
@@ -89,28 +89,28 @@ export default function Progress({progress, } : { progress : number}) {
       <div>
       <div className="w-full flex items-center gap-x-1">
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-100 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500/30"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
@@ -129,28 +129,28 @@ export default function Progress({progress, } : { progress : number}) {
       <div>
       <div className="w-full flex items-center gap-x-1">
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500"
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
           aria-valuemax={100}
         />
         <div
-          className="w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
+          className="rounded-lg w-full h-2.5 flex flex-col justify-center overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 "
           role="progressbar"
           aria-valuenow={25}
           aria-valuemin={0}
