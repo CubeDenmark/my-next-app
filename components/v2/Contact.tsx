@@ -10,7 +10,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
-  const captchaRef = useRef<unknown>(null)
+  const captchaRef = useRef<HCaptcha>(null)
   const router = useRouter()
 
   const onHCaptchaChange = (token: string | null) => {
