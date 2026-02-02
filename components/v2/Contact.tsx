@@ -1,24 +1,23 @@
-'use client';
-import { MapPin, Phone, Mail, Calendar } from "lucide-react"
+"use client"
+
 import { useState, useRef } from "react"
 import { useRouter } from "next/navigation"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { WEB3FORMS_KEY } from "@/lib/web3form";
-
 
 export default function Contact() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
-  const captchaRef = useRef<any>(null)
+  const captchaRef = useRef<unknown>(null)
   const router = useRouter()
 
   const onHCaptchaChange = (token: string | null) => {
     setCaptchaToken(token)
   }
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!captchaToken) {
@@ -26,7 +25,7 @@ export default function Contact() {
       return
     }
 
-    const formData = new FormData(event.target)
+    const formData = new FormData(event.target as HTMLFormElement)
     formData.append("access_key", WEB3FORMS_KEY)
      formData.append("captcha", captchaToken)
     // formData.append("h-captcha-response", captchaToken)
@@ -58,7 +57,6 @@ export default function Contact() {
       setCaptchaToken(null)
     }
   }
-
 
   return (
     <footer id="contact" className="pt-30 bg-white">
@@ -138,6 +136,9 @@ export default function Contact() {
               >
                 Send Message
               </button>
+              <p>{result}</p>
+            <p>{success}</p>
+
             </div>
 
             </form>
