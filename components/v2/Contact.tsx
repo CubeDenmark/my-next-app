@@ -1,45 +1,64 @@
 'use client';
+import { MapPin, Phone, Mail, Calendar } from "lucide-react"
+import { useState, useRef } from "react"
+import { useRouter } from "next/navigation"
+import HCaptcha from "@hcaptcha/react-hcaptcha"
+import { WEB3FORMS_KEY } from "@/lib/web3form";
+
 
 export default function Contact() {
-  /*
-  const footerNavs = [
-    {
-      label: "Resources",
-      items: [
-        { href: "javascript:void()", name: "contact" },
-        { href: "javascript:void()", name: "Support" },
-        { href: "javascript:void()", name: "Documentation" },
-        { href: "javascript:void()", name: "Pricing" },
-      ],
-    },
-    {
-      label: "About",
-      items: [
-        { href: "javascript:void()", name: "Terms" },
-        { href: "javascript:void()", name: "License" },
-        { href: "javascript:void()", name: "Privacy" },
-        { href: "javascript:void()", name: "About US" },
-      ],
-    },
-    {
-      label: "Explore",
-      items: [
-        { href: "javascript:void()", name: "Showcase" },
-        { href: "javascript:void()", name: "Roadmap" },
-        { href: "javascript:void()", name: "Languages" },
-        { href: "javascript:void()", name: "Blog" },
-      ],
-    },
-    {
-      label: "Company",
-      items: [
-        { href: "javascript:void()", name: "Partners" },
-        { href: "javascript:void()", name: "Team" },
-        { href: "javascript:void()", name: "Careers" },
-      ],
-    },
-  ];
-  */
+  const [result, setResult] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const captchaRef = useRef<any>(null)
+  const router = useRouter()
+
+  const onHCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token)
+  }
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault()
+
+    if (!captchaToken) {
+      alert("Please verify the CAPTCHA")
+      return
+    }
+
+    const formData = new FormData(event.target)
+    formData.append("access_key", WEB3FORMS_KEY)
+     formData.append("captcha", captchaToken)
+    // formData.append("h-captcha-response", captchaToken)
+
+    if (loading) return
+    setLoading(true)
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    })
+
+    const data = await response.json()
+    setResult(data.success ? "Success!" : "Error")
+
+    if (data.success) {
+      setSuccess(true)
+      setLoading(false)
+      if (captchaRef.current) {
+        captchaRef.current.resetCaptcha()
+      }
+      router.push("/success")
+    } else {
+      alert("Something went wrong. Try again.")
+      setLoading(false)
+      if (captchaRef.current) {
+        captchaRef.current.resetCaptcha()
+      }
+      setCaptchaToken(null)
+    }
+  }
+
 
   return (
     <footer id="contact" className="pt-30 bg-white">
@@ -52,7 +71,7 @@ export default function Contact() {
           </div>
           <div className="flex-1 mt-6 md:mt-0">
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
               className="flex items-center gap-x-3 md:justify-end"
             >
             
@@ -74,6 +93,7 @@ export default function Contact() {
                 </svg>
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="Enter your email"
                   className="w-full pl-12 pr-3 py-2 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
@@ -95,16 +115,27 @@ export default function Contact() {
                     d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                   />
                 </svg> */}
-                <input
-                  type="text"
+                <textarea
+                  name="message"
                   required
                   placeholder="Message here ......"
                   className="h-30 w-full pl-2 pr-3 py-0 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
               </div>
           
+              <div className="flex justify-center">
+                <HCaptcha
+                  ref={captchaRef}
+                  sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                  reCaptchaCompat={false}
+                  onVerify={onHCaptchaChange}
+                />
+              </div>
 
-              <button className="mt-3 block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow">
+              <button 
+                disabled={!captchaToken || loading}
+                className="mt-3 block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow  disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 Send Message
               </button>
             </div>
