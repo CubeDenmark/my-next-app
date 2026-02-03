@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import { useRouter } from "next/navigation"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
-import { WEB3FORMS_KEY } from "@/lib/web3form";
+import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
 
 export default function Contact() {
   const [result, setResult] = useState("")
@@ -124,7 +124,7 @@ export default function Contact() {
               <div className="flex justify-center">
                 <HCaptcha
                   ref={captchaRef}
-                  sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                  sitekey={HCAPTCHA_KEY}
                   reCaptchaCompat={false}
                   onVerify={onHCaptchaChange}
                 />
