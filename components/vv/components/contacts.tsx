@@ -1,71 +1,22 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { useRouter } from "next/navigation"
-import HCaptcha from "@hcaptcha/react-hcaptcha"
-import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
-import { access } from "fs";
+import type React from "react"
+
+import { useState } from "react"
 
 export default function Contacts() {
-  type formData = {
-    name: string,
-    email: string,
-    message: string,
-    access_key: string | null,
-    captcha: string | null,
-  }
-  const [formData, setFormData] = useState<formData>({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    access_key: "",
-    captcha: "",
-  });
+  })
 
-  const [result, setResult] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
-  const captchaRef = useRef<HCaptcha>(null)
-  const router = useRouter()
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission here
     console.log("Form submitted:", formData)
-
-    formData.access_key = WEB3FORMS_KEY;
-    formData.captcha = captchaToken;
-
-    if (loading) return
-    setLoading(true)
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    })
-
-    const data = await response.json()
-    setResult(data.success ? "Success!" : "Error")
-
-    if (data.success) {
-      setSuccess(true)
-      setLoading(false)
-      if (captchaRef.current) {
-        captchaRef.current.resetCaptcha()
-      }
-      router.push("/success")
-    } else {
-      alert("Something went wrong. Try again.")
-      setLoading(false)
-      if (captchaRef.current) {
-        captchaRef.current.resetCaptcha()
-      }
-      setCaptchaToken(null)
-    }
-
     // Reset form
-    setFormData({ name: "", email: "", message: "", access_key: "", captcha: ""})
+    setFormData({ name: "", email: "", message: "" })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
