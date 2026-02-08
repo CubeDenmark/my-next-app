@@ -27,7 +27,7 @@ export default function Contact() {
 
     const formData = new FormData(event.target as HTMLFormElement)
     formData.append("access_key", WEB3FORMS_KEY)
-     formData.append("captcha", captchaToken)
+    formData.append("captcha", captchaToken)
     // formData.append("h-captcha-response", captchaToken)
 
     if (loading) return
@@ -38,6 +38,8 @@ export default function Contact() {
       body: formData,
     })
 
+    console.log("Form submitted:", formData)
+
     const data = await response.json()
     setResult(data.success ? "Success!" : "Error")
 
@@ -47,7 +49,7 @@ export default function Contact() {
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
       }
-      router.push("/success")
+      // router.push("/success")
     } else {
       alert("Something went wrong. Try again.")
       setLoading(false)
