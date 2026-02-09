@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
 
@@ -11,7 +11,12 @@ export default function Contact() {
   const [success, setSuccess] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
-  const router = useRouter()
+  // const router = useRouter()
+  const [formData, setFormData] = useState({
+      email: "",
+      message: "",
+  })
+
 
   const onHCaptchaChange = (token: string | null) => {
     setCaptchaToken(token)
@@ -49,6 +54,8 @@ export default function Contact() {
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
       }
+      setCaptchaToken(null)
+      setFormData({email: "", message: "" })
       // router.push("/success")
     } else {
       alert("Something went wrong. Try again.")
@@ -58,6 +65,13 @@ export default function Contact() {
       }
       setCaptchaToken(null)
     }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
   }
 
   return (
@@ -94,6 +108,8 @@ export default function Contact() {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   placeholder="Enter your email"
                   className="w-full pl-12 pr-3 py-2 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
@@ -117,6 +133,8 @@ export default function Contact() {
                 </svg> */}
                 <textarea
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                   placeholder="Message here ......"
                   className="h-30 w-full pl-2 pr-3 py-0 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
