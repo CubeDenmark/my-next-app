@@ -1,17 +1,14 @@
 "use client"
 
 import { useState, useRef } from "react"
-// import { useRouter } from "next/navigation"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
 
 export default function Contacts() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
-  //  const router = useRouter()
   const [formData, setFormData] = useState({
       email: "",
       message: "",
@@ -49,11 +46,10 @@ export default function Contacts() {
     setResult(data.success ? "success" : "error")
 
     if (data.success) {
-      setSuccess(true)
+      // setSuccess(true)
       setLoading(false)
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
-        // captchaRef.current.removeCaptcha()
       }
       setCaptchaToken(null)
       setFormData({email: "", message: "" })
@@ -63,7 +59,6 @@ export default function Contacts() {
       setLoading(false)
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
-        // captchaRef.current.removeCaptcha()
       }
       setCaptchaToken(null)
     }
@@ -158,20 +153,6 @@ export default function Contacts() {
             {/* Contact Form */}
             <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground"
-                    placeholder="Your full name"
-                  />
-                </div> */}
-
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                     Email Address
@@ -221,7 +202,7 @@ export default function Contacts() {
                   Send Message
                 </button>
 
-                {success && (
+                {result === "success" && (
                   <div
                     className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
                     role="alert"
