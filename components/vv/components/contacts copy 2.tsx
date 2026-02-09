@@ -1,81 +1,30 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { useRouter } from "next/navigation"
-import HCaptcha from "@hcaptcha/react-hcaptcha"
-import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
+import type React from "react"
+
+import { useState } from "react"
 
 export default function Contacts() {
- const [result, setResult] = useState("")
-   const [loading, setLoading] = useState(false)
-   const [success, setSuccess] = useState(false)
-   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
-   const captchaRef = useRef<HCaptcha>(null)
-   const router = useRouter()
-   const [formData, setFormData] = useState({
-       name: "",
-       email: "",
-       message: "",
-     })
- 
-   const onHCaptchaChange = (token: string | null) => {
-     setCaptchaToken(token)
-   }
- 
-   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-     event.preventDefault();
- 
-     if (!captchaToken) {
-       alert("Please verify the CAPTCHA")
-       return
-     }
- 
-     const formData = new FormData(event.target as HTMLFormElement)
-     formData.append("access_key", WEB3FORMS_KEY)
-     formData.append("captcha", captchaToken)
-     // formData.append("h-captcha-response", captchaToken)
- 
-     if (loading) return
-     setLoading(true)
- 
-     const response = await fetch("https://api.web3forms.com/submit", {
-       method: "POST",
-       body: formData,
-     })
- 
-     console.log("Form submitted:", formData)
- 
-     const data = await response.json()
-     console.log(formData)
-     setResult(data.success ? "Success!" : "Error")
- 
-     if (data.success) {
-       setSuccess(true)
-       setLoading(false)
-       if (captchaRef.current) {
-         captchaRef.current.resetCaptcha()
-         captchaRef.current.removeCaptcha()
-       }
-       setCaptchaToken(null)
-       setFormData({ name: "", email: "", message: "" })
-       // router.push("/success")
-     } else {
-       alert("Something went wrong. Try again.")
-       setLoading(false)
-       if (captchaRef.current) {
-         captchaRef.current.resetCaptcha()
-         captchaRef.current.removeCaptcha()
-       }
-       setCaptchaToken(null)
-     }
-   }
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
 
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-       setFormData({
-         ...formData,
-         [e.target.name]: e.target.value,
-       })
-     }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log("Form submitted:", formData)
+    // Reset form
+    setFormData({ name: "", email: "", message: "" })
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
     <section className="py-20" id="contact">
@@ -159,7 +108,7 @@ export default function Contacts() {
             {/* Contact Form */}
             <div className="bg-card p-8 rounded-xl shadow-lg border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* <div>
+                <div>
                   <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                     Full Name
                   </label>
@@ -167,11 +116,13 @@ export default function Contacts() {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground"
                     placeholder="Your full name"
                   />
-                </div> */}
+                </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
@@ -205,24 +156,12 @@ export default function Contacts() {
                   />
                 </div>
 
-                <div className="flex justify-center">
-                  <HCaptcha
-                    ref={captchaRef}
-                    sitekey={HCAPTCHA_KEY}
-                    reCaptchaCompat={false}
-                    onVerify={onHCaptchaChange}
-                  />
-                </div>
-
                 <button
-                  disabled={!captchaToken || loading}
                   type="submit"
-                  className="w-full bg-accent text-accent-foreground py-3 px-6 rounded-lg font-medium hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-accent text-accent-foreground py-3 px-6 rounded-lg font-medium hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Send Message
                 </button>
-                  <p>{result}</p>
-                  <p>{success}</p>
               </form>
             </div>
           </div>

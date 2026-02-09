@@ -12,11 +12,6 @@ export default function Contacts() {
    const [captchaToken, setCaptchaToken] = useState<string | null>(null)
    const captchaRef = useRef<HCaptcha>(null)
    const router = useRouter()
-   const [formData, setFormData] = useState({
-       name: "",
-       email: "",
-       message: "",
-     })
  
    const onHCaptchaChange = (token: string | null) => {
      setCaptchaToken(token)
@@ -57,7 +52,6 @@ export default function Contacts() {
          captchaRef.current.removeCaptcha()
        }
        setCaptchaToken(null)
-       setFormData({ name: "", email: "", message: "" })
        // router.push("/success")
      } else {
        alert("Something went wrong. Try again.")
@@ -69,13 +63,6 @@ export default function Contacts() {
        setCaptchaToken(null)
      }
    }
-
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-       setFormData({
-         ...formData,
-         [e.target.name]: e.target.value,
-       })
-     }
 
   return (
     <section className="py-20" id="contact">
@@ -181,8 +168,6 @@ export default function Contacts() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground"
                     placeholder="your.email@example.com"
@@ -196,8 +181,6 @@ export default function Contacts() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-foreground resize-none"
