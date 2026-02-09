@@ -1,17 +1,14 @@
 "use client"
 
 import { useState, useRef } from "react"
-// import { useRouter } from "next/navigation"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { WEB3FORMS_KEY, HCAPTCHA_KEY } from "@/lib/web_captcha";
 
 export default function Contact() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
-  // const router = useRouter()
   const [formData, setFormData] = useState({
       email: "",
       message: "",
@@ -46,17 +43,15 @@ export default function Contact() {
     console.log("Form submitted:", formData)
 
     const data = await response.json()
-    setResult(data.success ? "Success!" : "Error")
+    setResult(data.success ? "success" : "error")
 
     if (data.success) {
-      setSuccess(true)
       setLoading(false)
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
       }
       setCaptchaToken(null)
       setFormData({email: "", message: "" })
-      // router.push("/success")
     } else {
       alert("Something went wrong. Try again.")
       setLoading(false)
@@ -156,7 +151,7 @@ export default function Contact() {
               >
                 Send Message
               </button>
-                {success && (
+                {result === "success" && (
                     <div
                       className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md mt-4"
                       role="alert"
@@ -196,23 +191,6 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
-          {/* {footerNavs.map((item, idx) => (
-            <ul className="space-y-4 text-gray-600" key={idx}>
-              <h4 className="text-gray-800 font-semibold sm:pb-2">
-                {item.label}
-              </h4>
-              {item.items.map((el, idx) => (
-                <li key={idx}>
-                  <a
-                    href={el.href}
-                    className="hover:text-gray-800 duration-150"
-                  >
-                    {el.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ))} */}
         </div>
         <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
           <p className="text-gray-600">
@@ -238,25 +216,6 @@ export default function Contact() {
                 </defs>
               </svg>
             </a>
-            {/* <a href="javascript:void()">
-              <svg
-                className="w-6 h-6 hover:text-gray-500 duration-150"
-                fill="none"
-                viewBox="0 0 48 48"
-              >
-                <g clipPath="url(#clip0_17_80)">
-                  <path
-                    fill="currentColor"
-                    d="M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_17_80">
-                    <path fill="#fff" d="M0 0h48v48H0z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a> */}
             <a href="https://github.com/CubeDenmark">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
