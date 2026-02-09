@@ -49,7 +49,7 @@ export default function Contact() {
       if (captchaRef.current) {
         captchaRef.current.resetCaptcha()
       }
-      // router.push("/success")
+      router.push("/success")
     } else {
       alert("Something went wrong. Try again.")
       setLoading(false)
