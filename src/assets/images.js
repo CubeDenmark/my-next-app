@@ -29,7 +29,7 @@ export const projects = [
     },
     {
       imageSrc: "/images/projects-img/ams/landing-page.png",
-      projectName: "QRCode Attendance Management System",
+      projectName: "Web-Based QR Code Attendance Management System",
       tech: "PHP, MySql, Apache, HTML, CSS, AJAX",
       description:
         "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",

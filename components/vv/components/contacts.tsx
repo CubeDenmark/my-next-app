@@ -103,7 +103,7 @@ export default function Contacts() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Email</h4>
-                      <p className="text-muted-foreground">denmark.cube@example.com</p>
+                      <p className="text-muted-foreground">cubesdenmark0624@gmail.com</p>
                     </div>
                   </div>
 
