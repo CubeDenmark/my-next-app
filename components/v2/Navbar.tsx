@@ -21,7 +21,7 @@ export default function Navbar() {
               D. Cube
             </span>
           </a>
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <button
               type="button"
               className="hs-collapse-toggle relative size-7 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
@@ -64,7 +64,7 @@ export default function Navbar() {
               </svg>
               <span className="sr-only">Toggle navigation</span>
             </button>
-          </div>
+          </div> */}
         </div>
         <div
           id="hs-navbar-example"
