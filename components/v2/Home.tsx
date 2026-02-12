@@ -1,4 +1,4 @@
-import profile from "../../public/images/profile.jpg";
+import profile from "../../public/images/profile2.jpg";
 import Image from "next/image";
 export default function Home() {
   return (
