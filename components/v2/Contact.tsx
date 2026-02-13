@@ -200,7 +200,7 @@ export default function Contact() {
             © 2025 All rights reserved.
           </p>
           <div className="flex items-center gap-x-6 text-gray-400 mt-6">
-            <a href="https://www.facebook.com/makxies24">
+            <a href="https://www.facebook.com/makxies24" target="_blank">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -219,7 +219,7 @@ export default function Contact() {
                 </defs>
               </svg>
             </a>
-            <a href="https://github.com/CubeDenmark">
+            <a href="https://github.com/CubeDenmark" target="_blank">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -240,7 +240,7 @@ export default function Contact() {
                 </defs>
               </svg>
             </a>
-            <a href="https://www.instagram.com/makxies/">
+            <a href="https://www.instagram.com/makxies/" target="_blank">
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="currentColor"
