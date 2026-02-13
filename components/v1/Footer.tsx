@@ -8,21 +8,21 @@ export default function Footer() {
         <section className="flex flex-wrap justify-center border-t-1 border-amber-50">
             <div className="flex flex-wrap justify-center w-70 pt-2">
                 <div className="flex justify-around w-30">
-                    <a href="https://github.com/CubeDenmark" title="linkedin icons">
+                    <a href="https://github.com/CubeDenmark" target="_blank" title="linkedin icons">
                         <Image 
                             className="h-[20px] w-[20px]"
                             alt="Test"
                             src={Github}                     
                         />
                     </a>
-                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" title="linkedin icons">
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" title="linkedin icons">
                         <Image 
                             className="h-[20px] w-[20px]"
                             alt="Test"
                             src={linkedin}                     
                         />
                     </a>
-                    <a href="https://www.facebook.com/makxies24" title="linkedin icons">
+                    <a href="https://www.facebook.com/makxies24" target="_blank" title="linkedin icons">
                         <Image 
                             className="h-[20px] w-[20px]"
                             alt="Test"
