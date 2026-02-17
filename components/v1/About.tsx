@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Profile from "../../public/images/profile.jpg"
+import Profile from "../../public/images/profile2.jpg"
 export default function About() {
     return (
         <section className="w-screen h-screen" id="about">  
