@@ -1,15 +1,3 @@
-# WHAT’S WRONG IN YOUR CURRENT FLOW
-
-# This line is the problem:
-
-# -o ProxyCommand="cloudflared access ssh --hostname ssh.edutrack.space"
-# Why it breaks in CI:
-# access ssh expects browser login OR Access identity
-# GitHub Actions has no browser session
-# Cloudflare returns:
-# → tls: internal error
-# → connection abort
-
 name: Build and Deploy Portfolio with three(3) version via Cloudflare SSH
 
 on:
@@ -51,11 +39,9 @@ jobs:
 
       # ---- Deploy via SSH ----
       - name: Deploy to Mini PC
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
           ssh \
@@ -63,11 +49,12 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o ProxyCommand="cloudflared access ssh --hostname ssh.edutrack.space" \
-            makxiesdell@ssh.edutrack.space \
+            -o ProxyCommand="cloudflared access tcp --hostname ssh.edutrack.space --url localhost:2222" \
+            -p 2222 \
+            makxiesdell@localhost \
             "
-            cd /opt/apps/x3portfolio || exit 1
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
-            docker compose up -d
-            docker image prune -f
+              cd /opt/apps/x3portfolio || exit 1
+              docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
+              docker compose up -d
+              docker image prune -f
             "
