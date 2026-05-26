@@ -14,8 +14,8 @@ export default function About() {
             <div className="relative">
               <div className="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl"></div>
               <Image
-                className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-accent/20"
-                src="/professional-developer-working-at-computer.png"
+                className="relative max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-accent/20"
+                src="/coding2.png"
                 alt="Denmark S. Cube working on development projects"
                 width={400}
                 height={500}

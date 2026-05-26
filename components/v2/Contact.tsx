@@ -74,7 +74,7 @@ export default function Contact() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="justify-between items-center gap-12 md:flex">
           <div className="flex-1 max-w-lg">
-            <h3 className="text-2xl font-bold">
+            <h3 id="contact-h3" className="text-2xl font-bold">
               Get our beautiful newsletter straight to your inbox.
             </h3>
           </div>

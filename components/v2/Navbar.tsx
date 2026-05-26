@@ -3,7 +3,7 @@ import Logo from "../../public/images/github.png";
 
 export default function Navbar() {
   return (
-    <header className="fixed flex z-50 flex-wrap backdrop-blur-md sm:justify-start sm:flex-nowrap w-full border-b border-gray-600  text-sm py-3  bg-card/80">
+    <header className="fixed flex z-50 flex-wrap backdrop-blur-md sm:justify-start sm:flex-nowrap w-full border-b border-gray-600  text-sm py-3  bg-card/0">
       {/* fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border */}
       <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
