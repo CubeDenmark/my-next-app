@@ -23,12 +23,12 @@ jobs:
         run: |
             docker build \
             -f docker/Dockerfile \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest \
+            -t makxies24/x3portfolio:latest \
             .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
+          docker push makxies24/x3portfolio:latest
 
       # ---- Install cloudflared ----
       - name: Install cloudflared
@@ -53,7 +53,7 @@ jobs:
             makxiesdell@ssh.agriapp.site \
             "
               cd /opt/apps/x3portfolio || exit 1
-              docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
+              docker pull makxies24/x3portfolio:latest
               docker compose up -d
               docker image prune -f
             "
