@@ -37,7 +37,7 @@ jobs:
           chmod +x cloudflared
           sudo mv cloudflared /usr/local/bin/
 
-      # ---- Deploy via SSH ----
+      # ---- Deploy via TCP ----
       - name: Deploy to Mini PC
         run: |
           mkdir -p ~/.ssh
