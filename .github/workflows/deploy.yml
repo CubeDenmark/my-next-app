@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-            docker build \
+          docker build \
             -f docker/Dockerfile \
             -t makxies24/x3portfolio:latest \
             .
@@ -37,7 +37,7 @@ jobs:
           chmod +x cloudflared
           sudo mv cloudflared /usr/local/bin/
 
-      # ---- Deploy via TCP ----
+      # ---- Deploy via TCP (FIXED) ----
       - name: Deploy to Mini PC
         run: |
           mkdir -p ~/.ssh
@@ -52,10 +52,10 @@ jobs:
             -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site" \
             makxiesdell@ssh.agriapp.site \
             "
+              echo '${{ secrets.DOCKERHUB_TOKEN }}' | docker login -u '${{ secrets.DOCKERHUB_USERNAME }}' --password-stdin
+
               cd /opt/apps/x3portfolio || exit 1
               docker pull makxies24/x3portfolio:latest
               docker compose up -d
               docker image prune -f
             "
-
-            
