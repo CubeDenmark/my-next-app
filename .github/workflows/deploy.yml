@@ -1,3 +1,15 @@
+# WHAT’S WRONG IN YOUR CURRENT FLOW
+
+# This line is the problem:
+
+# -o ProxyCommand="cloudflared access ssh --hostname ssh.edutrack.space"
+# Why it breaks in CI:
+# access ssh expects browser login OR Access identity
+# GitHub Actions has no browser session
+# Cloudflare returns:
+# → tls: internal error
+# → connection abort
+
 name: Build and Deploy Portfolio with three(3) version via Cloudflare SSH
 
 on:
