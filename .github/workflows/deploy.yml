@@ -49,8 +49,8 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site --url localhost:2222" \
-            -p 2222 \
+            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site --url localhost:22" \
+            -p 22 \
             makxiesdell@localhost \
             "
               cd /opt/apps/x3portfolio || exit 1
