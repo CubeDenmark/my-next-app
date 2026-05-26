@@ -23,12 +23,12 @@ jobs:
         run: |
           docker build \
             -f docker/Dockerfile \
-            -t makxies24/x3portfolio:latest \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest \
             .
 
       - name: Push Docker image
         run: |
-          docker push makxies24/x3portfolio:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
 
       # ---- Install cloudflared ----
       - name: Install cloudflared
@@ -55,7 +55,7 @@ jobs:
               echo '${{ secrets.DOCKERHUB_TOKEN }}' | docker login -u '${{ secrets.DOCKERHUB_USERNAME }}' --password-stdin
 
               cd /opt/apps/x3portfolio || exit 1
-              docker pull makxies24/x3portfolio:latest
+              docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
               docker compose up -d
               docker image prune -f
             "
