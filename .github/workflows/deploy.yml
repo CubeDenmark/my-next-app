@@ -37,11 +37,13 @@ jobs:
           chmod +x cloudflared
           sudo mv cloudflared /usr/local/bin/
 
-      # ---- Deploy via TCP ----
+      # ---- Deploy via SSH ----
       - name: Deploy to Mini PC
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
           ssh \
@@ -49,13 +51,11 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site" \
-            makxiesdell@ssh.agriapp.site \
+            -o ProxyCommand="cloudflared access ssh --hostname ssh.edutrack.space" \
+            makxiesdell@ssh.edutrack.space \
             "
-              cd /opt/apps/x3portfolio || exit 1
-              docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
-              docker compose up -d
-              docker image prune -f
+            cd /opt/apps/x3portfolio || exit 1
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
+            docker compose up -d
+            docker image prune -f
             "
-
-            
