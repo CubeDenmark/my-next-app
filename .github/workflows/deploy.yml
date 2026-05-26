@@ -49,9 +49,8 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site --url localhost:22" \
-            -p 22 \
-            makxiesdell@localhost \
+            -o ProxyCommand="cloudflared access tcp --hostname ssh.edutrack.space" \
+            makxiesdell@ssh.edutrack.space \
             "
               cd /opt/apps/x3portfolio || exit 1
               docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
