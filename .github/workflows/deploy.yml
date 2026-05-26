@@ -37,7 +37,7 @@ jobs:
           chmod +x cloudflared
           sudo mv cloudflared /usr/local/bin/
 
-      # ---- Deploy via SSH ----
+      # ---- Deploy via TCP ----
       - name: Deploy to Mini PC
         run: |
           mkdir -p ~/.ssh
@@ -49,12 +49,13 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site --url localhost:22" \
-            -p 22 \
-            makxiesdell@localhost \
+            -o ProxyCommand="cloudflared access tcp --hostname ssh.agriapp.site" \
+            makxiesdell@ssh.agriapp.site \
             "
               cd /opt/apps/x3portfolio || exit 1
               docker pull ${{ secrets.DOCKERHUB_USERNAME }}/x3portfolio:latest
               docker compose up -d
               docker image prune -f
             "
+
+            
