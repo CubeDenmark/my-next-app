@@ -1,21 +1,37 @@
-import Header from "../../components/v1/Header";
-import Main from "../../components/v1/Home";
-import About from "../../components/v1/About";
-import Projects from "../../components/v1/Projects";
-import Skills from "../../components/v1/Skills"
-import Contacts from "../../components/v1/Contacts";
-import Footer from "../../components/v1/Footer";
+import AnimatedBackground from "@/vv/components/animated-background"
+import ScrollProgress from "@/vv/components/scroll-progress"
+import Header from "@/vv/components/header"
+import Home from "@/vv/components/home"
+import About from "@/vv/components/about"
+import Projects from "@/vv/components/projects"
+import Skills from "@/vv/components/skills"
+import Contacts from "@/vv/components/contacts"
+import Footer from "@/vv/components/footer"
+import FloatingNav from "@/vv/components/floating-nav"
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <main id="main_div_v1">
+    <main id="vv" className="relative">
+      <AnimatedBackground />
+      <ScrollProgress />
       <Header />
-      <Main />
-      <About />
-      <Projects />
-      <Skills />
-      <Contacts />
+      <FloatingNav />
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="contact">
+        <Contacts />
+      </section>
       <Footer />
     </main>
-  );
+  )
 }
