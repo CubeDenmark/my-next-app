@@ -22,7 +22,7 @@ export default function Home() {
             <div className="mb-6">
               <p className="text-lg text-muted-foreground mb-2 font-sans">Hello, I&apos;m</p>
               <h1 className="text-4xl lg:text-6xl font-serif font-bold text-balance mb-4">
-                <span className="text-foreground">Denmark </span>
+                <span className="text-foreground">Denmark S. </span>
                 <span className="text-accent">Cube</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-sans">
