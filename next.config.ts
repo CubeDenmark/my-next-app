@@ -22,7 +22,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'export',
+  output: 'export', 
+  // // for github pages (github static hosting and no custom domain)
+  // basePath: '/portfolio',
+  // assetPrefix: '/portfolio/'
 };
 
 export default nextConfig;
