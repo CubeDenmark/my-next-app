@@ -41,13 +41,13 @@ export const projects = [
       description:
         "A modernized version of Agrikultur'App built with a faster and more scalable architecture. Features a responsive and user-friendly interface, real-time bidding updates, and improved user experience for both farmers and consumers.",
     },
-    // {
-    //   imageSrc: "/images/projects-img/villa-konsuela/landing-page.png",
-    //   projectName: "Villa Konsuela",
-    //   tech: "Nextjs, Docker, Github Actions",
-    //   description:
-    //     "A modern business website for a resort and events venue showcasing accommodations, amenities, event services, image galleries, contact information, and online booking or inquiry features.",
-    // },
+    {
+      imageSrc: "/images/projects-img/villa-konsuela/landing-page.png",
+      projectName: "Villa Konsuela",
+      tech: "Nextjs, Docker, Github Actions",
+      description:
+        "A modern business website for a resort and events venue showcasing accommodations, amenities, event services, image galleries, contact information, and online booking or inquiry features.",
+    },
   ];
 
 
