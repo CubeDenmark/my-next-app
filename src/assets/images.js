@@ -3,7 +3,6 @@ export const projects = [
       imageSrc: "/images/projects-img/agrikulturapp/landing-page.png",
       projectName: "Agrikultur'App",
       tech: "Laravel, Apache, MySql",
-      demoLink: "https://agrikulturapp.denmarkcube.site",
       sourceLink: "https://github.com/denmarkcube/agrikultur-app",
       description:
         "An online auction platform that enables farmers to sell their produce directly to consumers, eliminating middlemen and helping reduce market prices. Features include product listings, bidding system, and direct buyer-seller transactions.",
@@ -39,8 +38,6 @@ export const projects = [
       imageSrc: "/images/projects-img/ams/landing-page.png",
       projectName: "Web-Based QR Code Attendance Management System",
       tech: "PHP, MySql, Apache, HTML, CSS, AJAX",
-      demoLink: "https://ams.denmarkcube.site",
-      sourceLink: "https://github.com/denmarkcube/ams",
       description:
         "A QR code-based attendance management system for students. Includes attendance tracking, dashboard analytics, and report generation with PDF and Excel export functionality.",
     },
@@ -57,7 +54,6 @@ export const projects = [
       imageSrc: "/images/projects-img/villa-konsuela/landing-page.png",
       projectName: "Villa Konsuela",
       tech: "Nextjs, Docker, Github Actions",
-      demoLink: "https://villa-consuela.denmarkcube.site",
       sourceLink: "https://github.com/denmarkcube/villa-konsuela",
       description:
         "A modern business website for a resort and events venue showcasing accommodations, amenities, event services, image galleries, contact information, and online booking or inquiry features.",
